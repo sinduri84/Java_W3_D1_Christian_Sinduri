@@ -4,6 +4,8 @@ import ChristianA1.Employee;
 import ChristianA2.Dog;
 import ChristianA3.Student;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -48,9 +50,40 @@ public class Main {
         student1.setBorn(2004);
         student1.setSchoolClass("4b");
 
-        student1.displayStudent();
 
         Student student2 = new Student();
+
+        student2.setName("Markus");
+        student2.setSurname("Markl");
+        student2.setBorn(2002);
+        student2.setSchoolClass("6c");
+
+        Student student3 = new Student();
+
+        student3.setName("Maria");
+        student3.setSurname("Huber");
+        student3.setBorn(2002);
+        student3.setSchoolClass("6a");
+
+        Student student4 = new Student();
+
+        student4.setName("Stefanie");
+        student4.setSurname("Stankovic");
+        student4.setBorn(2006);
+        student4.setSchoolClass("2e");
+
+        ArrayList<Student> studentArray = new ArrayList<>();
+
+        studentArray.add(student1);
+        studentArray.add(student2);
+        studentArray.add(student3);
+        studentArray.add(student4);
+
+
+        for(Student student : studentArray) {
+            student.displayStudent();
+        }
+
 
     }
 }
